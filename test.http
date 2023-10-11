@@ -1,0 +1,52 @@
+GET http://localhost:3000/api HTTP/1.1
+###
+GET https://localhost:3000/api HTTP/1.1
+###
+GET https://localhost:3000/api/posts HTTP/1.1
+###
+GET https://localhost:3000/api/posts/{postId} HTTP/1.1
+###
+POST https://localhost:3000/api/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "",
+    "description": "",
+    "departmentCode": ""
+}
+###
+DELETE https://localhost:3000/api/posts/65266c02cd0c641b68a1cc47 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwidXNlcmlkIjoiNjUyNmFjYTg5OWRiMzJiNjFhY2M3OTE5IiwiaWF0IjoxNjk3MDQxOTA3LCJleHAiOjE2OTcwNDU1MDd9.2unsmjCxJCQNogesSvUkubH6jZ5b-p9mC1Kt9LLNm38
+###
+POST https://localhost:3000/api/users/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "test5",
+    "firstName": "Sarah",
+    "lastName": "Pip",
+    "password": "Secrets34"
+}
+###
+POST https://localhost:3000/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "test3",
+    "firstName": "Vix",
+    "lastName": "Pop",
+    "password": "OmNomNom"
+}
+###
+POST https://localhost:3000/api/posts HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwidXNlcmlkIjoiNjUyNmFjYTg5OWRiMzJiNjFhY2M3OTE5IiwiaWF0IjoxNjk3MDM1MjcyLCJleHAiOjE2OTcwMzg4NzJ9.Z2O8tcFRJqFVJha_CLMx9cPQwHy-qoFunqmG3QZjkeQ
+
+{
+    "title": "Post2",
+    "description": "Traffic Department, Pothole in CPT, London rd",
+    "departmentCode": "25"
+}
+###
+

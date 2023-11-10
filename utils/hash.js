@@ -11,5 +11,5 @@ async function isValidPassword(password, hash)
 {
     return await bcrypt.compare(password, hash);
 }
-
+9
 module.exports = {hashPassword, isValidPassword};

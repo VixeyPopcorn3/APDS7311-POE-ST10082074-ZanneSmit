@@ -11,6 +11,7 @@ const connstring = 'mongodb+srv://Vixey:Figero37@cluster0.cc4dikm.mongodb.net/?r
 
 const postRoutes = require("./routes/post");
 const userRoutes = require("./routes/user");
+const lockAccount = require("./routes/lockAccount");
 
 mongoose.connect(connstring)
 .then(()=>
@@ -46,6 +47,8 @@ app.get(urlprefix + '/', (req, res) =>
 app.use(urlprefix + '/posts', postRoutes)
 
 app.use(urlprefix + '/users', userRoutes)
+
+app.use(urlprefix + '/lockAccount', lockAccount);
 
 module.exports = app;
 /*const express = require('express');

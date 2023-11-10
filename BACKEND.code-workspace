@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"launch": {
+		"configurations": [
+			{
+				"type": "msedge",
+				"name": "https://localhost:3000/api/posts",
+				"request": "launch",
+				"url": "https://localhost:3000/api/posts"
+			}
+		]
+	}
+}
